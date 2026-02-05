@@ -96,7 +96,7 @@ check_wget_curl() {
 	# Check wget
 	if [ -e '/usr/bin/wget' ]; then
 		if [ -e '/etc/redhat-release' ]; then
-			wget -q https://raw.githubusercontent.com/ScriptElite/LinkPanel-V3/release/install/linkpnl-install-rhel.sh -O linkpnl-install-rhel.sh
+			wget -q https://raw.githubusercontent.com/ScriptElite/LinkPanel-V3/main/install/linkpnl-install-rhel.sh -O linkpnl-install-rhel.sh
 			if [ "$?" -eq '0' ]; then
 				bash linkpnl-install-rhel.sh $*
 				exit
@@ -105,7 +105,7 @@ check_wget_curl() {
 				exit 1
 			fi
 		else
-			wget -q https://raw.githubusercontent.com/ScriptElite/LinkPanel-V3/release/install/linkpnl-install-$type.sh -O linkpnl-install-$type.sh
+			wget -q https://raw.githubusercontent.com/ScriptElite/LinkPanel-V3/main/install/linkpnl-install-$type.sh -O linkpnl-install-$type.sh
 			if [ "$?" -eq '0' ]; then
 				bash linkpnl-install-$type.sh $*
 				exit
@@ -119,7 +119,7 @@ check_wget_curl() {
 	# Check curl
 	if [ -e '/usr/bin/curl' ]; then
 		if [ -e '/etc/redhat-release' ]; then
-			curl -s -O https://raw.githubusercontent.com/ScriptElite/LinkPanel-V3/release/install/linkpnl-install-rhel.sh
+			curl -s -O https://raw.githubusercontent.com/ScriptElite/LinkPanel-V3/main/install/linkpnl-install-rhel.sh
 			if [ "$?" -eq '0' ]; then
 				bash linkpnl-install-rhel.sh $*
 				exit
@@ -128,7 +128,7 @@ check_wget_curl() {
 				exit 1
 			fi
 		else
-			curl -s -O https://raw.githubusercontent.com/ScriptElite/LinkPanel-V3/release/install/linkpnl-install-$type.sh
+			curl -s -O https://raw.githubusercontent.com/ScriptElite/LinkPanel-V3/main/install/linkpnl-install-$type.sh
 			if [ "$?" -eq '0' ]; then
 				bash linkpnl-install-$type.sh $*
 				exit
