@@ -590,7 +590,7 @@ install_welcome_message() {
 	echo
 	echo "========================================================================"
 	echo
-	echo "Thank you for downloading LinkPanel Control Panel! In a few moments,"
+	echo "感谢下载,请稍等..."
 	echo "we will begin installing the following components on your server:"
 	echo
 }
