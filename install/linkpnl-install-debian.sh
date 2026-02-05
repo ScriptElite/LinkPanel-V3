@@ -17,7 +17,7 @@ export PATH=$PATH:/sbin
 export DEBIAN_FRONTEND=noninteractive
 RHOST='ftp.nl.debian.org'
 VERSION='debian'
-LINKPANEL='/setcp'
+LINKPANEL='/usr/local/linkpanel'
 LOG="/root/linkpnl_install_backups/linkpnl_install-$(date +%d%m%Y%H%M).log"
 memory=$(grep 'MemTotal' /proc/meminfo | tr ' ' '\n' | grep [0-9])
 linkpnl_backups="/root/linkpnl_install_backups/$(date +%d%m%Y%H%M)"
@@ -33,9 +33,9 @@ VERBOSE='no'
 # Define software versions
 LINKPANEL_INSTALL_VER='1.9.0~alpha'
 # Supported PHP versions
-multiphp_v=("5.6" "7.0" "7.1" "7.2" "7.3" "7.4" "8.0" "8.1" "8.2" "8.3" "8.4")
+multiphp_v=("5.6" "7.0" "7.1" "7.2" "7.3" "7.4" "8.0" "8.1" "8.2" "8.3")
 # One of the following PHP versions is required for Roundcube / phpmyadmin
-multiphp_required=("7.3" "7.4" "8.0" "8.1" "8.2","8.3","8.4")
+multiphp_required=("7.3" "7.4" "8.0" "8.1" "8.2","8.3")
 # Default PHP version if none supplied
 fpm_v="8.2"
 # MariaDB version
@@ -590,7 +590,7 @@ install_welcome_message() {
 	echo
 	echo "========================================================================"
 	echo
-	echo "感谢下载,请稍等..."
+	echo "感谢你下载 LinkPanel 控制面板! 请稍等..."
 	echo "we will begin installing the following components on your server:"
 	echo
 }
