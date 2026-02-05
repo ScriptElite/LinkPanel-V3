@@ -15,7 +15,7 @@
 #----------------------------------------------------------#
 export PATH=$PATH:/sbin
 export DEBIAN_FRONTEND=noninteractive
-RHOST='ftp.us.debian.org'
+RHOST='ftp.nl.debian.org'
 VERSION='debian'
 LINKPANEL='/setcp'
 LOG="/root/linkpnl_install_backups/linkpnl_install-$(date +%d%m%Y%H%M).log"
