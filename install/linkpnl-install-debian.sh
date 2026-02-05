@@ -15,9 +15,9 @@
 #----------------------------------------------------------#
 export PATH=$PATH:/sbin
 export DEBIAN_FRONTEND=noninteractive
-RHOST='ftp.nl.debian.org'
+RHOST='ftp.us.debian.org'
 VERSION='debian'
-LINKPANEL='/usr/local/linkpanel'
+LINKPANEL='/setcp'
 LOG="/root/linkpnl_install_backups/linkpnl_install-$(date +%d%m%Y%H%M).log"
 memory=$(grep 'MemTotal' /proc/meminfo | tr ' ' '\n' | grep [0-9])
 linkpnl_backups="/root/linkpnl_install_backups/$(date +%d%m%Y%H%M)"
@@ -33,9 +33,9 @@ VERBOSE='no'
 # Define software versions
 LINKPANEL_INSTALL_VER='1.9.0~alpha'
 # Supported PHP versions
-multiphp_v=("5.6" "7.0" "7.1" "7.2" "7.3" "7.4" "8.0" "8.1" "8.2" "8.3")
+multiphp_v=("5.6" "7.0" "7.1" "7.2" "7.3" "7.4" "8.0" "8.1" "8.2" "8.3" "8.4")
 # One of the following PHP versions is required for Roundcube / phpmyadmin
-multiphp_required=("7.3" "7.4" "8.0" "8.1" "8.2","8.3")
+multiphp_required=("7.3" "7.4" "8.0" "8.1" "8.2","8.3","8.4")
 # Default PHP version if none supplied
 fpm_v="8.2"
 # MariaDB version
